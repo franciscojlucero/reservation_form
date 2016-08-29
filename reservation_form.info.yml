@@ -1,0 +1,6 @@
+name: Reservation Form
+type: module
+description: 'Reservation form for tiltevent.com'
+package: Custom
+core: 8.x
+hidden: false

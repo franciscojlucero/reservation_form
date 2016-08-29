@@ -1,0 +1,8 @@
+reservation_form_contribute:
+  path: 'reservations'
+  defaults:
+    _form: '\Drupal\reservation_form\Form\ContributeForm'
+    _title: 'Reservation'
+  requirements:
+    _permission: 'access content'
+

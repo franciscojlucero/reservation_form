@@ -1,0 +1,20 @@
+<?php
+/**
+ * Implements hook_mail().
+ */
+function reservation_form_mail($key, &$message, $params) {
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+/**
+  Switch is used here in case we need to extend the ability of this module to handle other contact types
+*/ 
+  switch ($key) {
+    case 'Reservation':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('Reservation Request');
+      $message['body'][] = $params['message']['body'];
+      break;
+  }
+}
+?>
