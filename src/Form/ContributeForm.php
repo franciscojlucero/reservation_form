@@ -286,7 +286,7 @@ class ContributeForm extends FormBase {
       }
     }
     $params['message']['body'] = $info;
-    \Drupal::service('plugin.manager.mail')->mail('reservation_form', 'Reservation', 'info@tiltevent.com, sheffield408@gmail.com, lsmat@smatwebdesign.com', 'en', $params);
+    \Drupal::service('plugin.manager.mail')->mail('reservation_form', 'Reservation', '<place recipient  email addresses seperated with commas>', 'en', $params);
     drupal_set_message($this->t('Your form has been submitted, we will contact you soon.'));
 
   }
